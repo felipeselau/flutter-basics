@@ -69,7 +69,7 @@ class _TaskListState extends State<TaskList> {
               itemCount: tasks.length,
               separatorBuilder: (context, index) => const Divider(
                 indent: 12,
-                endIndent: 32,
+                endIndent: 12,
               ),
               itemBuilder: (context, index) {
                 final task = tasks[index];
@@ -91,6 +91,8 @@ class _TaskListState extends State<TaskList> {
                             fontSize: 24,
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
+                            decorationThickness: 2.0,
+                            decorationColor: Colors.black,
                             decoration: task.completed
                                 ? TextDecoration.lineThrough
                                 : null),
